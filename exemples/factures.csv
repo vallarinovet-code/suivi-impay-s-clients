@@ -1,0 +1,7 @@
+no_facture,date_facture,client,animaux,prestation,categorie,montant_ht,tva_pct,acompte_verse,date_echeance,statut
+FAC-2026-0001,2026-10-05,CLI-001,ANI-001,Consultation + vaccination CHPPI,Consultation,80.00,10,0,2026-11-04,Impayée
+FAC-2026-0002,2026-10-12,CLI-002,ANI-003,Chirurgie — stérilisation,Chirurgie,320.00,10,100,2026-11-11,Partielle
+FAC-2026-0003,2026-09-20,CLI-003,ANI-004,Consultation + analyses sanguines,Analyses,150.00,10,0,2026-10-20,Impayée
+FAC-2026-0004,2026-10-25,CLI-004,ANI-005,Consultation annuelle équine,Consultation,60.00,10,60,2026-11-24,Payée
+FAC-2026-0005,2026-08-15,CLI-005,ANI-006,Hospitalisation 3 jours + perfusion,Hospitalisation,890.00,10,0,2026-09-14,Impayée
+FAC-2026-0006,2026-11-01,CLI-001,ANI-002,Aliments thérapeutiques renal 12 kg,Alimentation,110.00,20,0,2026-12-01,À échoir

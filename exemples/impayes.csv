@@ -1,0 +1,5 @@
+id_impaye,facture,client,montant_impaye,date_echeance,niveau_relance,prochaine_action,statut,responsable
+IMP-001,FAC-2026-0001,CLI-001,88.00,2026-11-04,J+15,Email J+15 + SMS,Ouvert,Secrétariat
+IMP-002,FAC-2026-0002,CLI-002,252.00,2026-11-11,J+7,Email J+7,En cours,Secrétariat
+IMP-003,FAC-2026-0003,CLI-003,165.00,2026-10-20,J+30,Mise en demeure LRAR,Ouvert,Gérant
+IMP-004,FAC-2026-0005,CLI-005,979.00,2026-09-14,J+60,Échelonnement ou injonction de payer,Recouvrement externe,Gérant

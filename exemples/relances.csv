@@ -1,0 +1,7 @@
+id_relance,date,impaye,client,canal,effectuee_par,contact,resume,reponse_client,date_promesse,resultat
+REL-001,2026-11-11,IMP-001,CLI-001,Email,Secrétariat A.,Mme Dupont,"Relance J+7 envoyée, facture 88 €",Promesse de payer,2026-11-18,En attente
+REL-002,2026-11-12,IMP-002,CLI-002,SMS,Secrétariat A.,M. Martin,"SMS J+7 envoyé, reste 252 €",Aucune,,À relancer
+REL-003,2026-10-27,IMP-003,CLI-003,Email,Secrétariat B.,Mme Bernard,"Relance J+7, facture 165 €",Aucune,,Escalader
+REL-004,2026-11-05,IMP-003,CLI-003,Téléphone,Gérant,Mme Bernard,"Appel : conteste le montant des analyses",Contestation,,Escalader
+REL-005,2026-09-22,IMP-004,CLI-005,Email,Gérant,Auto-répondeur,"Relance J+7, facture 979 €",Aucune,,À relancer
+REL-006,2026-10-15,IMP-004,CLI-005,LRAR,Gérant,Accusé de réception reçu,"Mise en demeure envoyée le 15/10",Aucune,,Escalader

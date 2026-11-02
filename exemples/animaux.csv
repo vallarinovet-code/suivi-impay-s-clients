@@ -1,0 +1,7 @@
+id_animal,nom,espece,race,sexe,date_naissance,numero_puce,proprietaire,notes
+ANI-001,Rex,Chien,Labrador,M,2019-05-12,250268500123456,CLI-001,Vacciné
+ANI-002,Mlya,Chat,Européen,F stérilisée,2021-03-02,250268500654321,CLI-001,Stérilisée en 2023
+ANI-003,Cookie,Chien,Berger Australien,M,2018-11-20,250268500789012,CLI-002,
+ANI-004,Nougat,Chat,Siamois,M,2020-07-15,250268500345678,CLI-003,
+ANI-005,Tornado,Cheval,Pur-sang arabe,M,2015-04-01,250268500901234,CLI-004,
+ANI-006,Luna,Chien,Beagle,F,2022-01-25,250268500567890,CLI-005,

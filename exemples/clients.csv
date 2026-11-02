@@ -1,0 +1,6 @@
+id_client,nom,prenom,telephone,email,adresse,code_postal,ville,consentement_relance,canal_prefere,mode_paiement_habituel,statut
+CLI-001,Dupont,Marie,0601020304,marie.dupont@example.fr,12 rue des Lilas,75011,Paris,oui,Email,CB,Actif
+CLI-002,Martin,Lucas,0612345678,lucas.martin@example.fr,3 avenue de la République,69003,Lyon,oui,SMS,Virement,Actif
+CLI-003, Bernard,Sophie,0623456789,sophie.bernard@example.fr,45 chemin des Vignes,33000,Bordeaux,oui,Courrier,Chèque,Actif
+CLI-004,Petit,Hugo,0634567890,hugo.petit@example.fr,8 impasse du Moulin,44000,Nantes,non,Email,CB,Actif
+CLI-005,Robert,Emma,0645678901,emma.robert@example.fr,27 boulevard Saint-Michel,31000,Toulouse,oui,Email,CB,Litige
