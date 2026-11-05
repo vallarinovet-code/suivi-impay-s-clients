@@ -518,15 +518,25 @@ def main():
     parser.add_argument("--db", default=DEFAULT_DB)
     args = parser.parse_args()
 
-    init_db(args.db, seed=True)
+    try:
+        init_db(args.db, seed=True)
+    except sqlite3.DatabaseError as e:
+        print(f"Erreur : la base '{args.db}' est illisible ou corrompue ({e}).", flush=True)
+        print("Renommez le fichier .db puis relancez pour repartir d'une base neuve (données de démonstration).", flush=True)
+        return
     Handler.api = Api(args.db)
-    server = ThreadingHTTPServer((HOST, args.port), Handler)
-    print(f"Suivi des impayés — http://{HOST}:{args.port}  (Ctrl+C pour arrêter)")
-    print(f"Base de données : {args.db}")
+    try:
+        server = ThreadingHTTPServer((HOST, args.port), Handler)
+    except OSError as e:
+        print(f"Erreur : impossible d'écouter sur http://{HOST}:{args.port} ({e}).", flush=True)
+        print("Port probablement déjà occupé : relancez avec un autre port, ex. --port 8080", flush=True)
+        return
+    print(f"Suivi des impayés — http://{HOST}:{args.port}  (Ctrl+C pour arrêter)", flush=True)
+    print(f"Base de données : {args.db}", flush=True)
     try:
         server.serve_forever()
     except KeyboardInterrupt:
-        print("\nArrêt.")
+        print("\nArrêt.", flush=True)
 
 
 if __name__ == "__main__":

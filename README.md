@@ -16,6 +16,23 @@ Options : `--port 8080` pour changer le port, `--db chemin.db` pour changer la b
 
 L'application n'écoute que sur `127.0.0.1` (boucle locale) : aucune exposition réseau.
 
+### Dépannage — « je ne peux plus y accéder »
+
+- **Connexion refusée** sur `http://127.0.0.1:8000` : le serveur ne tourne plus. L'application ne vit
+  que tant que le terminal qui la lance est ouvert — relancez `cd app && ./run.sh` et laissez le
+  terminal ouvert (après un redémarrage de l'ordinateur, il faut relancer).
+- Utilisez exactement **`http://127.0.0.1:8000`** : `localhost` peut viser l'IPv6 (`::1`), que le
+  serveur n'écoute pas.
+- **Port 8000 déjà occupé** : le serveur affiche un message explicite et s'arrête ; relancez avec
+  `--port 8080` puis ouvrez `http://127.0.0.1:8080`.
+- N'ouvrez pas `static/index.html` directement en `file://` : l'interface a besoin du serveur pour
+  appeler l'API.
+- L'application n'est volontairement joignable **que depuis la machine locale** : pas d'accès depuis
+  un téléphone ou un autre ordinateur.
+- Les données vivent dans `app/suivi_impayes.db` (fichier non versionné) : si le dossier est supprimé
+  ou recloné ailleurs, une base neuve avec données de démonstration est recréée. Si le fichier `.db`
+  est corrompu, un message s'affiche au lancement : renommez-le pour repartir à zéro.
+
 ## 🧭 Fonctionnalités
 
 - **Tableau de bord** : encours impayé, répartition par tranche (0–30 / 31–60 / 61–90 / > 90 j),
