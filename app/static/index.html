@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suivi des impayés — Clinique vétérinaire</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>🐾 Suivi des impayés — Clinique vétérinaire</h1>
+  <nav id="tabs">
+    <button data-tab="dashboard" class="active">Tableau de bord</button>
+    <button data-tab="impayes">Impayés</button>
+    <button data-tab="factures">Factures</button>
+    <button data-tab="clients">Clients</button>
+    <button data-tab="relances">Relances</button>
+    <button data-tab="paiements">Paiements</button>
+    <button data-tab="modeles">Modèles de relance</button>
+  </nav>
+</header>
+
+<main>
+  <section id="tab-dashboard" class="tab active">
+    <div id="kpis" class="kpis"></div>
+    <h2>Impayés à relancer (échéance dépassée)</h2>
+    <div id="dash-impayes"></div>
+  </section>
+
+  <section id="tab-impayes" class="tab">
+    <div class="toolbar">
+      <label><input type="checkbox" id="filtre-a-relancer"> Uniquement à relancer aujourd'hui</label>
+      <a class="btn" href="/api/export/impayes.csv">⬇ Export CSV</a>
+    </div>
+    <div id="liste-impayes"></div>
+  </section>
+
+  <section id="tab-factures" class="tab">
+    <div class="toolbar"><button class="btn primary" onclick="openForm('facture')">+ Nouvelle facture</button></div>
+    <div id="liste-factures"></div>
+    <div id="form-facture" class="modal hidden"></div>
+  </section>
+
+  <section id="tab-clients" class="tab">
+    <div class="toolbar"><button class="btn primary" onclick="openForm('client')">+ Nouveau client</button></div>
+    <div id="liste-clients"></div>
+    <div id="form-client" class="modal hidden"></div>
+    <div id="detail-client" class="modal hidden"></div>
+  </section>
+
+  <section id="tab-relances" class="tab">
+    <div class="toolbar">
+      <button class="btn primary" onclick="openForm('relance')">+ Nouvelle relance</button>
+      <a class="btn" href="/api/export/relances.csv">⬇ Export CSV</a>
+    </div>
+    <div id="liste-relances"></div>
+    <div id="form-relance" class="modal hidden"></div>
+  </section>
+
+  <section id="tab-paiements" class="tab">
+    <div class="toolbar"><button class="btn primary" onclick="openForm('paiement')">+ Nouveau paiement</button></div>
+    <div id="liste-paiements"></div>
+    <div id="form-paiement" class="modal hidden"></div>
+  </section>
+
+  <section id="tab-modeles" class="tab">
+    <p class="hint">Modèles de relance (J+7 à J+60). Remplacez les <code>{variables}</code> avant envoi. Cadre légal : art. L. 441-10 C. com. (pénalités + 40 €), LRAR à J+30, injonction de payer à J+60+, prescription 5 ans.</p>
+    <div id="liste-modeles"></div>
+  </section>
+</main>
+
+<div id="toast" class="hidden"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>
